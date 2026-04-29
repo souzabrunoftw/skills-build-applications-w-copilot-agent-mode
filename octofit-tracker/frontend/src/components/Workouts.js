@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE = process.env.REACT_APP_CODESPACE_NAME
-  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api`
-  : 'http://localhost:8000/api';
-const ENDPOINT = `${API_BASE}/workouts/`;
+const ENDPOINT = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`
+  : 'http://localhost:8000/api/workouts/';
 const MODAL_ID = 'workoutsDetailsModal';
 
 function Workouts() {
