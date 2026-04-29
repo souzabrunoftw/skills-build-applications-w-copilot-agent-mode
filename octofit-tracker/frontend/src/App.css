@@ -1,0 +1,39 @@
+.App {
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #212529;
+}
+
+.navbar-brand {
+  letter-spacing: 0.04em;
+}
+
+.card {
+  border: 0;
+}
+
+.card-header,
+.card-body {
+  border-radius: 0.5rem;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+}
+
+.table thead th {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  min-height: 150px;
+}
+
+.endpoint-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.badge-secondary {
+  font-size: 0.8rem;
+}
