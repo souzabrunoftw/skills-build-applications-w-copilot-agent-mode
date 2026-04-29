@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-3+wi_g+u7t_i$195^uipb*0^g12!d!3eor*_5!j&^=(3f^4fvg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+import os
+
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    os.getenv('CODESPACE_NAME', 'localhost'),
+    f"{os.getenv('CODESPACE_NAME', 'localhost')}.preview.app.github.dev" if os.getenv('CODESPACE_NAME') else None,
+    f"{os.getenv('CODESPACE_NAME', 'localhost')}.app.github.dev" if os.getenv('CODESPACE_NAME') else None,
+]
+ALLOWED_HOSTS = [host for host in ALLOWED_HOSTS if host is not None]
 
 
 # Application definition
